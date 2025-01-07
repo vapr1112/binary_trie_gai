@@ -1,6 +1,6 @@
 #include "Binary_tree.h"
 
-void Binary_tree::remove(Node* node) 
+void Binary_tree::remove(Node* node) noexcept
 {
     if (node) 
     {
@@ -10,7 +10,7 @@ void Binary_tree::remove(Node* node)
     }
 }
 
-Node* Binary_tree::min(Node* node) const 
+Node* Binary_tree::min(Node* node) const noexcept
 {
     while (node && node->left)
     {
@@ -19,7 +19,7 @@ Node* Binary_tree::min(Node* node) const
     return node;
 }
 
-Node* Binary_tree::max(Node* node) const 
+Node* Binary_tree::max(Node* node) const noexcept
 {
     while (node && node->right)
     {
@@ -28,7 +28,7 @@ Node* Binary_tree::max(Node* node) const
     return node;
 }
 
-Node* Binary_tree::next(Node* node) const 
+Node* Binary_tree::next(Node* node) const noexcept
 {
     //завершение работы, если node пуст
     if (!node)
@@ -54,7 +54,7 @@ Node* Binary_tree::next(Node* node) const
     return parent;
 }
 
-Node* Binary_tree::prev(Node* node) const 
+Node* Binary_tree::prev(Node* node) const noexcept
 {
     //завершение работы, если node пуст
     if (!node)
@@ -80,7 +80,7 @@ Node* Binary_tree::prev(Node* node) const
     return parent;
 }
 
-Node* Binary_tree::search(Node* node, int key) const
+Node* Binary_tree::search(Node* node, int key) const noexcept
 {
     while (node)
     {
@@ -95,7 +95,7 @@ Node* Binary_tree::search(Node* node, int key) const
     return nullptr;
 }
 
-void Binary_tree::print(Node* node, int parametr) const
+void Binary_tree::print(Node* node, int parametr) const noexcept
 {
     //завершение работы, если node пуст
     if (!node)
@@ -119,7 +119,7 @@ void Binary_tree::print(Node* node, int parametr) const
 
 }
 
-void Binary_tree::insert(int value, string offense)
+void Binary_tree::insert(int value, string offense)noexcept
 {
     Node* new_node = new Node(value, offense);
     Node* current = root;
@@ -166,7 +166,7 @@ void Binary_tree::insert(int value, string offense)
 
 }
 
-void Binary_tree::remove_tree(Node* node) 
+void Binary_tree::remove_tree(Node* node) noexcept
 {
     if (!node)
     {
@@ -192,7 +192,7 @@ void Binary_tree::remove_tree(Node* node)
     }
 }
 
-void Binary_tree::remove_node(Node*& node)
+void Binary_tree::remove_node(Node*& node)noexcept
 {
 
     if (!node)

@@ -14,6 +14,6 @@ public:
     Node* right;
     Node* parent;
 
-    Node(int key_P, string offense_p) : key(key_P), offense(offense_p), left(nullptr), right(nullptr), parent(nullptr) {}
+    Node(int key_P, string offense_p)noexcept : key(key_P), offense(offense_p), left(nullptr), right(nullptr), parent(nullptr) {}
 };
 
